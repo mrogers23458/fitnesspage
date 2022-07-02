@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import LoginStyles from '../../styles/Forms/LoginStyles'
+
 import Link from 'next/link'
 
 export default function LoginForm(){
@@ -36,7 +36,7 @@ export default function LoginForm(){
 
     console.log(credentials)
     return(
-        <LoginStyles>
+        <div>
             <div className='login-inputs'>
                 <label htmlFor="username">Username</label>
                 <input name="username" onChange={handleOnChange} type="text" placeholder="Username" />
@@ -46,6 +46,6 @@ export default function LoginForm(){
             <button onClick={handleLogin}>Login</button>
             <p>dont have an account? <span><Link href="/signup">Sign up</Link></span></p>
         
-        </LoginStyles>
+        </div>
     )
 }
